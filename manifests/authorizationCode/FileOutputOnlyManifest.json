@@ -1,0 +1,89 @@
+{
+    "name": "File Output SoR",
+    "description": {
+        "short": "Write files to the system of record",
+        "long": "This app writes completed documents to a system of record."
+    },
+    "publisher": {
+        "name": "Fontara",
+        "email": "support@fontara.com",
+        "phone": "415-555-1212",
+        "website": "www.fontara.com"
+    },
+    "termsOfServiceUrl": "www.fontara.com/tos",
+    "privacyUrl": "www.fontara.com/privacy",
+    "supportUrl": "www.fontara.com/support",
+    "connections": [
+        {
+            "name": "authentication",
+            "description": "secure connection to the app",
+            "type": "oauth2",
+            "params": {
+                "provider": "CUSTOM",
+                "scopes": [
+                ],
+                "grantType": "authorization_code",
+                "clientId": "<CLIENT_ID>",
+                "clientSecret": "<CLIENT_SECRET>",
+                "customConfig": {
+                    "authorizationMethod": "header",
+                    "authorizationParams": {
+                        "prompt": "consent",
+                        "access_type": "offline"
+                    },
+                    "authorizationUrl": "<PROXY_BASE_URL>/api/oauth/authorize",
+                    "requiredScopes": [
+                    ],
+                    "scopeSeparator": " ",
+                    "tokenUrl": "<PROXY_BASE_URL>/api/oauth/token",
+                    "refreshScopes": [
+                    ]
+                }
+            }
+        }
+    ],
+    "extensions": [
+        {
+            "name": "File Output to System of Record",
+            "description": "Write a file to the system of record",
+            "template": "FileIO.Version1.FileOutputSystemOfRecord",
+            "actionReferences": [
+                "write-file",
+                "get-type-names"
+            ],
+            "capabilities": [
+                "DataIO.Version6.GetTypeNames"
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "get-type-names",
+            "description": "Get a list of data source objects",
+            "template": "DataIO.Version6.GetTypeNames",
+            "connectionsReference": "authentication",
+            "params": {
+                "uri": "<PROXY_BASE_URL>/api/dataio/getTypeNames"
+            }
+        },
+        {
+            "name": "write-file",
+            "description": "Write a file to the system of record",
+            "template": "FileIO.Version1.WriteFile",
+            "connectionsReference": "authentication",
+            "params": {
+                "uri": "<PROXY_BASE_URL>/api/writefile"
+            }
+        }
+    ],
+    "publicationRegions": [
+        "US"
+    ],
+    "distribution": "PUBLIC",
+    "icon": {
+        "data": "iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADcSURBVHgB7dwxCsMwEADBc8j/v+zUgTRJZNY2M6ULF1oOhECaAQAAAAAA7m778G0fjvS25o8hJUBMgJgAMQFi23xvX/ivK1uyDiYgJkBMgJgAMQFizzm/f8+mTr07MwExAWICxASICRC7wi7o1mdMJiAmQEyAmAAxAWICxASICRATICZATICYADEBYgLEBIgJEBMgJkBMgJgAMQFiAsQEiAkQEyAmQEyAmAAxAWICxASICRATICZATICYADEBYgLEBIitvCfsxd0fmICYADEBYgLEBAAAAAAAADjYCwxUBYWYirDwAAAAAElFTkSuQmCC",
+        "mediaType": "image/png"
+    },
+    "screenshots": [
+    ]
+}

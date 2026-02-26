@@ -1,0 +1,16 @@
+[
+  {
+    "Id": "0",
+    "fullName": "Sarah Johnson",
+    "email": "s.johnson@fontara.com",
+    "phone": "+1-415-555-0193",
+    "currentOpportunity": "1"
+  },
+  {
+    "Id": "1",
+    "fullName": "Michael Chen",
+    "email": "m.chen@fontara.com",
+    "phone": "+1-510-555-0176",
+    "currentOpportunity": "2"
+  }
+]

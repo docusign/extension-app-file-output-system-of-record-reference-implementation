@@ -1,0 +1,41 @@
+[
+  {
+    "Id": "0",
+    "firstName": "Sally",
+    "lastName": "Signer",
+    "accountNumber": "111222333",
+    "email": "sally.signer@fontara.com",
+    "phone": "+1-415-555-0193",
+    "linkedRoutingNumber": "111222331",
+    "linkedAccountNumber": "111222332",
+    "linkedAccountOwnerName": "Sally S. Signer",
+    "linkedAccountType": "savings",
+    "signedEFTAuthorization": ""
+  },
+  {
+    "Id": "1",
+    "firstName": "Steve",
+    "lastName": "Signer",
+    "accountNumber": "222333444",
+    "email": "steve.signer@fontara.com",
+    "phone": "+1-212-555-7347",
+    "linkedRoutingNumber": "222333442",
+    "linkedAccountNumber": "222333443",
+    "linkedAccountOwnerName": "Steve S. Signer",
+    "linkedAccountType": "checking",
+    "signedEFTAuthorization": ""
+  },
+  {
+    "Id": "2",
+    "firstName": "Samantha",
+    "lastName": "Signer",
+    "accountNumber": "333444555",
+    "email": "samantha.signer@fontara.com",
+    "phone": "+1-212-555-7683",
+    "linkedRoutingNumber": "333444553",
+    "linkedAccountNumber": "333444554",
+    "linkedAccountOwnerName": "Samantha S. Signer",
+    "linkedAccountType": "checking",
+    "signedEFTAuthorization": ""
+  }
+]
