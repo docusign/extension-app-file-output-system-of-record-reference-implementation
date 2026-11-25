@@ -1,5 +1,5 @@
 # Global arguments
-ARG BASE_IMAGE=node:lts-alpine
+ARG BASE_IMAGE=node:22.23.4-alpine
 ARG APP_DIR=/usr/src/app
 ARG UID=1000
 ARG GID=1000
